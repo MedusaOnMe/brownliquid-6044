@@ -343,6 +343,18 @@ export const useOrderlyConfig = () => {
           library_path: withBasePath("/tradingview/charting_library/"),
           customCssUrl: withBasePath("/tradingview/chart.css"),
           colorConfig: getColorConfig(),
+          overrides: {
+            "paneProperties.background": "#654321",
+            "paneProperties.backgroundType": "solid",
+            "scalesProperties.backgroundColor": "#8B4513",
+            "scalesProperties.textColor": "#FFFFFF",
+            "mainSeriesProperties.candleStyle.upColor": "#FFD700",
+            "mainSeriesProperties.candleStyle.downColor": "#FF6B35",
+            "mainSeriesProperties.candleStyle.borderUpColor": "#FFD700",
+            "mainSeriesProperties.candleStyle.borderDownColor": "#FF6B35",
+            "mainSeriesProperties.candleStyle.wickUpColor": "#FFD700",
+            "mainSeriesProperties.candleStyle.wickDownColor": "#FF6B35"
+          },
         },
         sharePnLConfig: {
           backgroundImages: getPnLBackgroundImages(),

@@ -331,11 +331,36 @@ span.oui-text-xs.oui-text-base-contrast-80.oui-transform-gpu {
 
 /* Orderbook unique styling */
 [class*="orderbook"], [data-testid*="orderbook"] {
-  border-radius: 16px !important;
+  border-radius: 4px !important;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgba(210, 105, 30, 0.3);
+  background-color: rgb(41, 28, 19) !important;
+  border: 1px solid rgba(210, 105, 30, 0.3);
   position: relative;
+}
+
+/* Fix orderbook colors */
+[class*="orderbook"] .oui-text-base-contrast-98,
+[class*="orderbook"] .oui-text-base-contrast-80,
+[class*="orderbook"] .oui-text-base-contrast-60,
+[class*="orderbook"] [class*="text"] {
+  color: #FFFFFF !important;
+}
+
+/* Fix buy/sell colors in orderbook */
+[class*="orderbook"] [class*="buy"],
+[class*="orderbook"] [class*="ask"] {
+  color: #FFD700 !important;
+}
+
+[class*="orderbook"] [class*="sell"],
+[class*="orderbook"] [class*="bid"] {
+  color: #FF6B35 !important;
+}
+
+/* Fix price columns */
+[class*="orderbook"] [class*="price"] {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
 }
 
 [class*="orderbook"]::before {
@@ -347,8 +372,8 @@ span.oui-text-xs.oui-text-base-contrast-80.oui-transform-gpu {
   background: linear-gradient(135deg, rgba(210, 105, 30, 0.9), rgba(139, 69, 19, 0.9));
   color: white;
   text-align: center;
-  padding: 4px 8px;
-  font-size: 11px;
+  padding: 2px 4px;
+  font-size: 10px;
   font-weight: 700;
   z-index: 10;
   border-bottom: 1px solid rgba(210, 105, 30, 0.5);
@@ -411,131 +436,9 @@ span.oui-text-xs.oui-text-base-contrast-80.oui-transform-gpu {
   backdrop-filter: blur(5px);
 }
 
-/* TRADING PAGE SPACING AND LAYOUT IMPROVEMENTS */
-.oui-trading-page {
-  padding: 4px !important;
-  gap: 4px !important;
-  min-height: 100vh !important;
-  overflow-x: hidden !important;
-}
+/* Remove all spacing modifications that broke the orderbook */
 
-/* Fix horizontal scrolling issues */
-.oui-trading-page * {
-  box-sizing: border-box !important;
-}
-
-/* Improved container spacing */
-.oui-trading-page > div {
-  max-width: 100% !important;
-  overflow-x: auto !important;
-}
-
-/* Fix text overflow in buttons and elements */
-[class*="button"],
-[class*="btn"],
-button {
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  min-width: fit-content !important;
-  padding: 8px 16px !important;
-}
-
-/* Better spacing for trading interface elements */
-[class*="trading-interface"],
-[class*="trading-panel"],
-[class*="trading-section"] {
-  padding: 2px !important;
-  margin: 1px 0 !important;
-  border-radius: 4px !important;
-}
-
-/* Fix horizontal bars with overlapping elements */
-[class*="toolbar"],
-[class*="header-bar"],
-[class*="control-bar"],
-.oui-flex[class*="justify-between"] {
-  flex-wrap: wrap !important;
-  gap: 12px !important;
-  padding: 12px 16px !important;
-  min-height: 60px !important;
-}
-
-/* Ensure buttons don't get cut off */
-[class*="toolbar"] button,
-[class*="header-bar"] button,
-[class*="control-bar"] button {
-  margin: 4px !important;
-  min-width: 100px !important;
-  height: 40px !important;
-}
-
-/* Fix scrollbar styling for better UX */
-[class*="scroll"],
-[class*="overflow"] {
-  scrollbar-width: thin !important;
-  scrollbar-color: rgba(210, 105, 30, 0.6) rgba(101, 67, 33, 0.2) !important;
-}
-
-[class*="scroll"]::-webkit-scrollbar,
-[class*="overflow"]::-webkit-scrollbar {
-  width: 8px !important;
-  height: 8px !important;
-}
-
-[class*="scroll"]::-webkit-scrollbar-track,
-[class*="overflow"]::-webkit-scrollbar-track {
-  background: rgba(101, 67, 33, 0.2) !important;
-  border-radius: 4px !important;
-}
-
-[class*="scroll"]::-webkit-scrollbar-thumb,
-[class*="overflow"]::-webkit-scrollbar-thumb {
-  background: rgba(210, 105, 30, 0.6) !important;
-  border-radius: 4px !important;
-}
-
-/* Improved grid layouts */
-[class*="grid"] {
-  gap: 2px !important;
-  padding: 2px !important;
-}
-
-/* Better responsive behavior */
-@media (max-width: 1200px) {
-  .oui-trading-page {
-    padding: 16px !important;
-  }
-
-  [class*="trading-interface"] {
-    flex-direction: column !important;
-    gap: 16px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .oui-trading-page {
-    padding: 12px !important;
-    gap: 12px !important;
-  }
-
-  [class*="toolbar"],
-  [class*="header-bar"],
-  [class*="control-bar"] {
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-
-  button {
-    width: 100% !important;
-    margin: 2px 0 !important;
-  }
-}
-
-/* Custom grid layout modifications */
-[class*="grid"], [class*="layout"] {
-  gap: 2px !important;
-}
+/* Remove grid layout modifications that broke orderbook */
 
 /* Unique button styling */
 [class*="buy"], [class*="sell"], button[class*="trade"] {
@@ -550,13 +453,7 @@ button {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Price ticker unique modifications */
-[class*="price-ticker"], [class*="symbol-info"], [class*="ticker"], [class*="info-bar"] {
-  border-radius: 4px !important;
-  border: 1px solid rgba(210, 105, 30, 0.3);
-  background: rgba(139, 69, 19, 0.1);
-  padding: 4px !important;
-}
+/* Remove ugly borders from price elements */
 
 /* Remove underlines from info bar elements */
 [class*="price-ticker"] *,
@@ -631,35 +528,9 @@ button {
 
 /* Removed floating status panel that was causing oval overlap issues */
 
-/* UNIQUE GRID LAYOUT SPACING */
-[class*="trading"] .grid, [class*="trading"] [class*="grid"] {
-  gap: 24px !important;
-  padding: 24px !important;
-}
+/* Remove trading grid spacing that broke orderbook */
 
-/* FLOATING ACTION BUTTONS FOR MOBILE - UNIQUE POSITIONING */
-@media (max-width: 768px) {
-  [class*="buy"], [class*="sell"] {
-    position: fixed !important;
-    bottom: 100px !important;
-    width: 120px !important;
-    height: 50px !important;
-    border-radius: 25px !important;
-    z-index: 1000;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  }
-
-  [class*="buy"] {
-    right: 140px !important;
-  }
-
-  [class*="sell"] {
-    right: 10px !important;
-  }
-}
+/* Removed floating mobile buttons that had oval borders */
 
 /* UNIQUE HEADER MODIFICATIONS */
 .oui-scaffold-header {
