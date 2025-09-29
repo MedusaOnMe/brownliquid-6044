@@ -2,80 +2,80 @@
   --oui-font-family: 'Raleway', sans-serif;
   --oui-font-size-base: 16px;
 
-  /* colors */
-  --oui-color-primary: 70 38 1;
-  --oui-color-primary-light: 127 51 11;
-  --oui-color-primary-darken: 56 27 0;
-  --oui-color-primary-contrast: 184 94 46;
+  /* BrownLiquid Shit Coining Color Palette */
+  --oui-color-primary: 210 105 30;
+  --oui-color-primary-light: 244 164 96;
+  --oui-color-primary-darken: 160 82 45;
+  --oui-color-primary-contrast: 255 255 255;
 
-  --oui-color-link: 96 55 16;
-  --oui-color-link-light: 138 85 36;
+  --oui-color-link: 222 184 135;
+  --oui-color-link-light: 245 222 179;
 
-  --oui-color-secondary: 71 41 11;
-  --oui-color-tertiary: 99 52 8;
-  --oui-color-quaternary: 102 62 36;
+  --oui-color-secondary: 139 69 19;
+  --oui-color-tertiary: 165 42 42;
+  --oui-color-quaternary: 188 143 143;
 
-  --oui-color-danger: 210 105 64;
-  --oui-color-danger-light: 243 165 123;
-  --oui-color-danger-darken: 193 83 51;
+  --oui-color-danger: 255 23 68;
+  --oui-color-danger-light: 255 138 171;
+  --oui-color-danger-darken: 198 18 52;
   --oui-color-danger-contrast: 255 255 255;
 
-  --oui-color-success: 34 139 34;
-  --oui-color-success-light: 88 184 88;
-  --oui-color-success-darken: 23 104 23;
+  --oui-color-success: 0 200 83;
+  --oui-color-success-light: 76 255 143;
+  --oui-color-success-darken: 0 150 62;
   --oui-color-success-contrast: 255 255 255;
 
-  --oui-color-warning: 181 101 29;
-  --oui-color-warning-light: 227 164 85;
-  --oui-color-warning-darken: 165 83 23;
-  --oui-color-warning-contrast: 255 255 255;
+  --oui-color-warning: 255 165 0;
+  --oui-color-warning-light: 255 218 185;
+  --oui-color-warning-darken: 255 140 0;
+  --oui-color-warning-contrast: 0 0 0;
 
-  --oui-color-fill: 100 52 17;
-  --oui-color-fill-active: 61 51 43;
+  --oui-color-fill: 160 82 45;
+  --oui-color-fill-active: 139 69 19;
 
-  --oui-color-base-1: 111 48 17;
-  --oui-color-base-2: 109 52 23;
-  --oui-color-base-3: 65 47 38;
-  --oui-color-base-4: 56 42 34;
-  --oui-color-base-5: 49 38 31;
-  --oui-color-base-6: 42 34 28;
-  --oui-color-base-7: 35 30 25;
-  --oui-color-base-8: 29 25 22;
-  --oui-color-base-9: 23 20 18;
-  --oui-color-base-10: 17 15 13;
+  --oui-color-base-1: 245 245 220;
+  --oui-color-base-2: 222 184 135;
+  --oui-color-base-3: 210 180 140;
+  --oui-color-base-4: 188 143 143;
+  --oui-color-base-5: 160 82 45;
+  --oui-color-base-6: 139 69 19;
+  --oui-color-base-7: 101 67 33;
+  --oui-color-base-8: 62 39 35;
+  --oui-color-base-9: 41 28 19;
+  --oui-color-base-10: 28 20 13;
 
   --oui-color-base-foreground: 255 255 255;
   --oui-color-line: 255 255 255;
 
-  --oui-color-trading-loss: 210 105 64;
+  --oui-color-trading-loss: 255 23 68;
   --oui-color-trading-loss-contrast: 255 255 255;
-  --oui-color-trading-profit: 34 139 34;
+  --oui-color-trading-profit: 0 200 83;
   --oui-color-trading-profit-contrast: 255 255 255;
 
-  /* gradients */
-  --oui-gradient-primary-start: 67 44 28;
-  --oui-gradient-primary-end: 146 90 53;
+  /* BrownLiquid Gradients */
+  --oui-gradient-primary-start: 244 164 96;
+  --oui-gradient-primary-end: 210 105 30;
 
-  --oui-gradient-secondary-start: 83 56 38;
-  --oui-gradient-secondary-end: 164 102 57;
+  --oui-gradient-secondary-start: 222 184 135;
+  --oui-gradient-secondary-end: 139 69 19;
 
-  --oui-gradient-success-start: 23 83 23;
-  --oui-gradient-success-end: 34 139 34;
+  --oui-gradient-success-start: 76 255 143;
+  --oui-gradient-success-end: 0 200 83;
 
-  --oui-gradient-danger-start: 146 74 37;
-  --oui-gradient-danger-end: 210 105 64;
+  --oui-gradient-danger-start: 255 138 171;
+  --oui-gradient-danger-end: 255 23 68;
 
-  --oui-gradient-brand-start: 127 51 11;
-  --oui-gradient-brand-end: 70 38 1;
+  --oui-gradient-brand-start: 244 164 96;
+  --oui-gradient-brand-end: 160 82 45;
   --oui-gradient-brand-stop-start: 6.62%;
   --oui-gradient-brand-stop-end: 86.5%;
   --oui-gradient-brand-angle: 17.44deg;
 
-  --oui-gradient-warning-start: 146 83 23;
-  --oui-gradient-warning-end: 181 101 29;
+  --oui-gradient-warning-start: 255 218 185;
+  --oui-gradient-warning-end: 255 165 0;
 
-  --oui-gradient-neutral-start: 35 29 24;
-  --oui-gradient-neutral-end: 46 40 33;
+  --oui-gradient-neutral-start: 101 67 33;
+  --oui-gradient-neutral-end: 62 39 35;
 
   /* rounded */
   --oui-rounded-sm: 2px;
@@ -97,4 +97,485 @@
 html, body {
   font-family: 'Raleway', sans-serif !important;
   font-size: 16px !important;
+  background-color: rgb(28, 20, 13) !important;
+}
+
+/* BrownLiquid main container backgrounds */
+.oui-bg-base-10 {
+  background-color: rgb(28, 20, 13) !important;
+}
+
+.oui-bg-base-9 {
+  background-color: rgb(41, 28, 19) !important;
+}
+
+.oui-bg-base-8 {
+  background-color: rgb(62, 39, 35) !important;
+}
+
+/* Main navigation styling */
+.oui-scaffold-header a,
+.oui-scaffold-header button,
+.oui-scaffold-header span {
+  color: #FFFFFF !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+/* Fix brown text on brown background - more aggressive */
+.oui-text-base-contrast-98,
+.oui-text-base-contrast-80,
+.oui-text-base-contrast-60,
+.oui-text-base-contrast-40,
+.oui-text-base-contrast-20,
+[class*="oui-text-base-contrast"],
+[class*="text-primary"],
+[class*="text-secondary"],
+span[class*="text"],
+div[class*="text"] {
+  color: #FFFFFF !important;
+}
+
+/* Force white text on any brown-ish elements - updated for new palette */
+[style*="color: rgb(210, 105, 30)"],
+[style*="color: rgb(244, 164, 96)"],
+[style*="color: rgb(160, 82, 45)"],
+[style*="color: rgb(139, 69, 19)"],
+[style*="color: rgb(101, 67, 33)"] {
+  color: #FFFFFF !important;
+}
+
+/* Navigation menu items specifically */
+nav a,
+nav button,
+nav span {
+  color: #FFFFFF !important;
+  font-size: 16px !important;
+}
+
+/* Hide announcement bar */
+span.oui-text-xs.oui-text-base-contrast-80.oui-transform-gpu {
+  display: none !important;
+}
+
+/* BrownLiquid Custom Animations & Effects */
+@keyframes brownPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes brownGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(210, 105, 30, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(210, 105, 30, 0.6), 0 0 30px rgba(210, 105, 30, 0.3); }
+}
+
+@keyframes slideInBrown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hover effects for buttons and interactive elements */
+.oui-button, [class*="oui-button"] {
+  transition: all 0.3s ease;
+}
+
+.oui-button:hover, [class*="oui-button"]:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px rgba(210, 105, 30, 0.3);
+}
+
+/* Trading interface enhancements */
+[class*="oui-trading"], [class*="trading"] {
+  animation: slideInBrown 0.5s ease-out;
+}
+
+/* Cards and panels with brown theme */
+[class*="oui-card"], [class*="card"], [class*="panel"] {
+  border: 1px solid rgba(210, 105, 30, 0.2);
+  transition: all 0.3s ease;
+}
+
+[class*="oui-card"]:hover, [class*="card"]:hover, [class*="panel"]:hover {
+  border-color: rgba(210, 105, 30, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Active trading elements glow */
+[class*="active"], .oui-active {
+  animation: brownGlow 2s ease-in-out infinite;
+}
+
+/* Subtle background pattern */
+.oui-scaffold-main {
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(210, 105, 30, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(222, 184, 135, 0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar with brown theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(101, 67, 33, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(210, 105, 30, 0.8), rgba(139, 69, 19, 0.8));
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(210, 105, 30, 1), rgba(139, 69, 19, 1));
+}
+
+/* Trading interface unique styling */
+[class*="orderbook"], [class*="depth"] {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Price display enhancements */
+[class*="price"], [class*="amount"] {
+  font-family: 'Courier New', 'Monaco', monospace !important;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Order form styling */
+[class*="order-form"], [class*="trading-form"] {
+  border-radius: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(101, 67, 33, 0.1), rgba(139, 69, 19, 0.05));
+  border: 1px solid rgba(210, 105, 30, 0.2);
+}
+
+/* Market data tables */
+[class*="market"], [class*="table"] {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+[class*="market"] thead, [class*="table"] thead {
+  background: linear-gradient(135deg, rgba(210, 105, 30, 0.8), rgba(139, 69, 19, 0.8));
+  color: white;
+  font-weight: 700;
+}
+
+/* Navigation enhancements */
+[class*="nav"], nav {
+  backdrop-filter: blur(10px);
+  background: rgba(28, 20, 13, 0.9) !important;
+  border-bottom: 2px solid rgba(210, 105, 30, 0.3);
+}
+
+/* Loading states with brown theme */
+[class*="loading"], [class*="spinner"] {
+  border-color: rgba(210, 105, 30, 0.3) !important;
+  border-top-color: rgba(210, 105, 30, 1) !important;
+}
+
+/* Tooltips and popovers */
+[class*="tooltip"], [class*="popover"] {
+  background: rgba(101, 67, 33, 0.95) !important;
+  border: 1px solid rgba(210, 105, 30, 0.5);
+  border-radius: 8px;
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+/* UNIQUE LAYOUT MODIFICATIONS FOR BROWNLIQUID */
+
+/* Add custom floating elements for uniqueness */
+.oui-scaffold-main::before {
+  content: '';
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(210, 105, 30, 0.1), rgba(139, 69, 19, 0.1));
+  border-radius: 50%;
+  border: 2px solid rgba(210, 105, 30, 0.3);
+  z-index: 1;
+  animation: brownPulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Unique trading interface grid modifications */
+[class*="trading-layout"], [class*="trading-grid"] {
+  gap: 16px !important;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+    rgba(28, 20, 13, 0.95) 0%,
+    rgba(41, 28, 19, 0.95) 50%,
+    rgba(28, 20, 13, 0.95) 100%);
+  border: 1px solid rgba(210, 105, 30, 0.2);
+}
+
+/* Orderbook unique styling */
+[class*="orderbook"], [data-testid*="orderbook"] {
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(210, 105, 30, 0.3);
+  position: relative;
+}
+
+[class*="orderbook"]::before {
+  content: '💩 LIQUID SHIT DEPTH';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, rgba(210, 105, 30, 0.9), rgba(139, 69, 19, 0.9));
+  color: white;
+  text-align: center;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 10;
+  border-bottom: 1px solid rgba(210, 105, 30, 0.5);
+}
+
+/* Chart container unique modifications */
+[class*="chart"], [class*="kline"], [data-testid*="chart"] {
+  border-radius: 16px !important;
+  overflow: hidden;
+  border: 2px solid rgba(210, 105, 30, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Position panel unique styling */
+[class*="position"], [class*="portfolio"], [data-testid*="position"] {
+  border-radius: 12px !important;
+  border: 2px solid rgba(210, 105, 30, 0.3);
+  background: linear-gradient(135deg,
+    rgba(41, 28, 19, 0.8) 0%,
+    rgba(62, 39, 35, 0.8) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Order form unique styling */
+[class*="order"], [class*="trade-form"], [data-testid*="order"] {
+  border-radius: 16px !important;
+  border: 2px solid rgba(210, 105, 30, 0.3);
+  background: linear-gradient(135deg,
+    rgba(101, 67, 33, 0.2) 0%,
+    rgba(139, 69, 19, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+[class*="order"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(210, 105, 30, 0.8), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Unique market data styling */
+[class*="market-data"], [class*="ticker"] {
+  border-radius: 12px !important;
+  border: 1px solid rgba(210, 105, 30, 0.2);
+  background: rgba(101, 67, 33, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Add spacing modifications for better layout */
+.oui-trading-page {
+  padding: 20px !important;
+  gap: 20px !important;
+}
+
+/* Custom grid layout modifications */
+[class*="grid"], [class*="layout"] {
+  gap: 20px !important;
+}
+
+/* Unique button styling */
+[class*="buy"], [class*="sell"], button[class*="trade"] {
+  border-radius: 12px !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+[class*="buy"]:hover, [class*="sell"]:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Price ticker unique modifications */
+[class*="price-ticker"], [class*="symbol-info"] {
+  border-radius: 12px !important;
+  border: 1px solid rgba(210, 105, 30, 0.3);
+  background: linear-gradient(135deg,
+    rgba(139, 69, 19, 0.1) 0%,
+    rgba(210, 105, 30, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  padding: 12px !important;
+}
+
+/* Add unique corner decorations */
+.oui-scaffold-content::after {
+  content: '💩';
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  opacity: 0.1;
+  z-index: 1;
+  pointer-events: none;
+  animation: brownPulse 4s ease-in-out infinite;
+}
+
+/* UNIQUE FLOATING STATUS PANEL - NO OTHER SITE HAS THIS */
+body::before {
+  content: 'LIQUID SHIT PROCESSING... 💩';
+  position: fixed;
+  top: 50%;
+  right: -200px;
+  transform: translateY(-50%) rotate(90deg);
+  background: linear-gradient(135deg,
+    rgba(210, 105, 30, 0.9) 0%,
+    rgba(139, 69, 19, 0.9) 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: brownGlow 2s ease-in-out infinite;
+}
+
+body:hover::before {
+  right: -150px;
+}
+
+/* UNIQUE GRID LAYOUT SPACING */
+[class*="trading"] .grid, [class*="trading"] [class*="grid"] {
+  gap: 24px !important;
+  padding: 24px !important;
+}
+
+/* FLOATING ACTION BUTTONS FOR MOBILE - UNIQUE POSITIONING */
+@media (max-width: 768px) {
+  [class*="buy"], [class*="sell"] {
+    position: fixed !important;
+    bottom: 100px !important;
+    width: 120px !important;
+    height: 50px !important;
+    border-radius: 25px !important;
+    z-index: 1000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  [class*="buy"] {
+    right: 140px !important;
+  }
+
+  [class*="sell"] {
+    right: 10px !important;
+  }
+}
+
+/* UNIQUE HEADER MODIFICATIONS */
+.oui-scaffold-header {
+  border-bottom: 3px solid rgba(210, 105, 30, 0.5) !important;
+  backdrop-filter: blur(20px) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+}
+
+/* ADVANCED TABLE STYLING THAT NO ONE ELSE HAS */
+table, [role="table"] {
+  border-collapse: separate !important;
+  border-spacing: 4px !important;
+}
+
+table tr, [role="row"] {
+  border-radius: 8px !important;
+  transition: all 0.2s ease;
+}
+
+table tr:hover, [role="row"]:hover {
+  background: rgba(210, 105, 30, 0.1) !important;
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* UNIQUE BREADCRUMB STYLING */
+[class*="breadcrumb"], nav[aria-label*="breadcrumb"] {
+  background: linear-gradient(90deg,
+    rgba(210, 105, 30, 0.1) 0%,
+    transparent 50%,
+    rgba(139, 69, 19, 0.1) 100%) !important;
+  border-radius: 12px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+/* COMPETITIVE ADVANTAGE: CUSTOM LOADING STATES */
+[class*="loading"] {
+  position: relative;
+  overflow: hidden;
+}
+
+[class*="loading"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(210, 105, 30, 0.3),
+    transparent);
+  animation: loadingShimmer 2s ease-in-out infinite;
+}
+
+@keyframes loadingShimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
 }

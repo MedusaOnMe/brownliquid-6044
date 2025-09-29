@@ -9,6 +9,7 @@ import { PortfolioActiveIcon, PortfolioInactiveIcon, TradingActiveIcon, TradingI
 import { getRuntimeConfig, getRuntimeConfigBoolean, getRuntimeConfigNumber } from "./runtime-config";
 import { Link } from "@remix-run/react";
 import CustomLeftNav from "@/components/CustomLeftNav";
+import { DEFAULT_SYMBOL } from "./storage";
 
 interface MainNavItem {
   name: string;
@@ -40,7 +41,8 @@ export type OrderlyConfig = {
 };
 
 const ALL_MENU_ITEMS = [
-  { name: "Trading", href: "/", translationKey: "common.trading" },
+  { name: "Home", href: "/", translationKey: "common.home" },
+  { name: "Trading", href: `/perp/${DEFAULT_SYMBOL}`, translationKey: "common.trading" },
   { name: "Portfolio", href: "/portfolio", translationKey: "common.portfolio" },
   { name: "Markets", href: "/markets", translationKey: "common.markets" },
   { name: "Rewards", href: "/rewards", translationKey: "tradingRewards.rewards" },
@@ -49,7 +51,8 @@ const ALL_MENU_ITEMS = [
 ];
 
 const DEFAULT_ENABLED_MENUS = [
-  { name: "Trading", href: "/", translationKey: "common.trading" },
+  { name: "Home", href: "/", translationKey: "common.home" },
+  { name: "Trading", href: `/perp/${DEFAULT_SYMBOL}`, translationKey: "common.trading" },
   { name: "Portfolio", href: "/portfolio", translationKey: "common.portfolio" },
   { name: "Markets", href: "/markets", translationKey: "common.markets" },
   { name: "Leaderboard", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
@@ -164,17 +167,25 @@ const getBottomNavIcon = (menuName: string) => {
 
 const getColorConfig = (): ColorConfigInterface | undefined => {
   const customColorConfigEnv = getRuntimeConfig('VITE_TRADING_VIEW_COLOR_CONFIG');
-  
+
+  // Return default config for BrownLiquid - only chart background dark
+  const defaultConfig = {
+    upColor: '#00C853',
+    downColor: '#FF1744',
+    pnlUpColor: '#00C853',
+    pnlDownColor: '#FF1744'
+  };
+
   if (!customColorConfigEnv || typeof customColorConfigEnv !== 'string' || customColorConfigEnv.trim() === '') {
-    return undefined;
+    return defaultConfig;
   }
-  
+
   try {
     const customColorConfig = JSON.parse(customColorConfigEnv);
-    return customColorConfig;
+    return { ...defaultConfig, ...customColorConfig };
   } catch (e) {
     console.warn("Error parsing VITE_TRADING_VIEW_COLOR_CONFIG:", e);
-    return undefined;
+    return defaultConfig;
   }
 };
 
@@ -244,10 +255,27 @@ export const useOrderlyConfig = () => {
                 externalLinks={customMenus}
               />
             }
-            <Link to="/">
-              {isMobile && getRuntimeConfigBoolean('VITE_HAS_SECONDARY_LOGO')
-                ? <img src={withBasePath("/logo-secondary.webp")} alt="logo" style={{ height: "32px" }} />
+            <Link to="/" className="oui-flex oui-items-center">
+              {getRuntimeConfigBoolean('VITE_HAS_PRIMARY_LOGO') || getRuntimeConfigBoolean('VITE_HAS_SECONDARY_LOGO')
+                ? <img
+                    src={withBasePath(isMobile ? "/logo-secondary.webp" : "/logo.webp")}
+                    alt="BrownLiquid"
+                    style={{
+                      height: isMobile ? "40px" : "48px",
+                      filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
+                    }}
+                  />
                 : components.title}
+              <span className={`oui-font-black ${isMobile ? 'oui-text-xl oui-ml-2' : 'oui-text-4xl oui-ml-4'}`} style={{
+                background: "linear-gradient(135deg, #D2691E 0%, #CD853F 50%, #DEB887 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+                letterSpacing: "0.02em"
+              }}>
+                {getRuntimeConfig("VITE_ORDERLY_BROKER_NAME") || "BrownLiquid"}
+              </span>
             </Link>
             {components.mainNav}
           </Flex>
@@ -275,7 +303,16 @@ export const useOrderlyConfig = () => {
           telegramUrl: getRuntimeConfig('VITE_TELEGRAM_URL') || undefined,
           discordUrl: getRuntimeConfig('VITE_DISCORD_URL') || undefined,
           twitterUrl: getRuntimeConfig('VITE_TWITTER_URL') || undefined,
-          trailing: <span className="oui-text-2xs oui-text-base-contrast-54">Charts powered by <a href="https://tradingview.com" target="_blank" rel="noopener noreferrer">TradingView</a></span>
+          trailing: (
+            <div className="oui-text-center">
+              <div className="oui-text-2xs oui-text-base-contrast-54 oui-mb-1">
+                Charts powered by <a href="https://tradingview.com" target="_blank" rel="noopener noreferrer">TradingView</a>
+              </div>
+              <div className="oui-text-2xs oui-text-base-contrast-36" style={{ fontStyle: 'italic' }}>
+                💩 Processing the finest liquid shit in DeFi since 2024 💩
+              </div>
+            </div>
+          )
         },
       },
       orderlyAppProvider: {
@@ -301,12 +338,12 @@ export const useOrderlyConfig = () => {
         sharePnLConfig: {
           backgroundImages: getPnLBackgroundImages(),
           color: "rgba(255, 255, 255, 0.98)",
-          profitColor: "rgba(41, 223, 169, 1)",
-          lossColor: "rgba(245, 97, 139, 1)",
-          brandColor: "rgba(255, 255, 255, 0.98)",
+          profitColor: "#00C853",
+          lossColor: "#FF1744",
+          brandColor: "rgb(222, 184, 135)",
           // ref
           refLink: typeof window !== 'undefined' ? window.location.origin : undefined,
-          refSlogan: getRuntimeConfig('VITE_ORDERLY_BROKER_NAME') || "Orderly Network",
+          refSlogan: getRuntimeConfig('VITE_ORDERLY_BROKER_NAME') || "BrownLiquid",
         },
       },
     };
