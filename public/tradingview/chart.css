@@ -11,27 +11,12 @@ span {
     letter-spacing: 0.03em;
 }
 
-/* COMPREHENSIVE TRADINGVIEW DARK THEME */
-:root, .theme-dark:root, .theme-light:root {
-    /* Main backgrounds */
-    --tv-color-pane-background: #1e222d !important;
-    --tv-color-platform-background: #1e222d !important;
-
-    /* Additional TradingView variables that might exist */
-    --tv-color-chart-background: #1e222d !important;
-    --tv-color-widget-background: #1e222d !important;
-    --tv-color-container-background: #1e222d !important;
-    --tv-color-background: #1e222d !important;
-    --tv-color-main-background: #1e222d !important;
-
-    /* Trading colors */
-    --up: #00C853 !important;
-    --down: #FF1744 !important;
-    --white-1: rgba(255, 255, 255, 0.98) !important;
-
-    /* Text colors for visibility */
-    --tv-color-text: rgba(255, 255, 255, 0.9) !important;
-    --tv-color-toolbar-button-text: rgba(255, 255, 255, 0.9) !important;
+.theme-dark:root {
+    --tv-color-pane-background: rgb(101, 67, 33);
+    --tv-color-platform-background: rgb(139, 69, 19);
+    --up: #FFD700;     /* Gold candles for up */
+    --down: #FF6B35;   /* Orange-red candles for down */
+    --white-1: rgba(255, 255, 255, 0.98);
 }
 
 /* Disabled instant orders placement control */
@@ -89,21 +74,3 @@ div[data-section-name='extendLeftTradingLine'] {
 .calculator-3AwNSLGC .calculator__input-3AwNSLGC {
     display: flex !important;
 }
-
-/* FORCE DARK BACKGROUND WITH HIGH SPECIFICITY */
-html body div[class*="tv-"],
-html body div[id*="tv-"],
-html body [class*="tradingview"],
-html body [id*="tradingview"],
-html body [class*="chart"],
-html body canvas {
-    background: #1e222d !important;
-    background-color: #1e222d !important;
-}
-
-/* Override inline styles */
-[style*="background"] {
-    background: #1e222d !important;
-    background-color: #1e222d !important;
-}
-

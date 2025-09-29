@@ -168,12 +168,13 @@ const getBottomNavIcon = (menuName: string) => {
 const getColorConfig = (): ColorConfigInterface | undefined => {
   const customColorConfigEnv = getRuntimeConfig('VITE_TRADING_VIEW_COLOR_CONFIG');
 
-  // Return default config for BrownLiquid - only chart background dark
+  // Return BrownLiquid themed colors that work with brown backgrounds
   const defaultConfig = {
-    upColor: '#00C853',
-    downColor: '#FF1744',
-    pnlUpColor: '#00C853',
-    pnlDownColor: '#FF1744'
+    upColor: '#FFD700',      // Gold for up - looks amazing on brown
+    downColor: '#FF6B35',    // Orange-red for down - complements brown
+    pnlUpColor: '#FFD700',   // Gold profit
+    pnlDownColor: '#FF6B35', // Orange-red loss
+    chartBG: 'rgb(101, 67, 33)' // Keep brown chart background
   };
 
   if (!customColorConfigEnv || typeof customColorConfigEnv !== 'string' || customColorConfigEnv.trim() === '') {
@@ -338,8 +339,8 @@ export const useOrderlyConfig = () => {
         sharePnLConfig: {
           backgroundImages: getPnLBackgroundImages(),
           color: "rgba(255, 255, 255, 0.98)",
-          profitColor: "#00C853",
-          lossColor: "#FF1744",
+          profitColor: "#FFD700",
+          lossColor: "#FF6B35",
           brandColor: "rgb(222, 184, 135)",
           // ref
           refLink: typeof window !== 'undefined' ? window.location.origin : undefined,

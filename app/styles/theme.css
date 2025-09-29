@@ -15,15 +15,15 @@
   --oui-color-tertiary: 165 42 42;
   --oui-color-quaternary: 188 143 143;
 
-  --oui-color-danger: 255 23 68;
-  --oui-color-danger-light: 255 138 171;
-  --oui-color-danger-darken: 198 18 52;
+  --oui-color-danger: 255 107 53;
+  --oui-color-danger-light: 255 140 100;
+  --oui-color-danger-darken: 230 80 30;
   --oui-color-danger-contrast: 255 255 255;
 
-  --oui-color-success: 0 200 83;
-  --oui-color-success-light: 76 255 143;
-  --oui-color-success-darken: 0 150 62;
-  --oui-color-success-contrast: 255 255 255;
+  --oui-color-success: 255 215 0;
+  --oui-color-success-light: 255 235 80;
+  --oui-color-success-darken: 200 170 0;
+  --oui-color-success-contrast: 0 0 0;
 
   --oui-color-warning: 255 165 0;
   --oui-color-warning-light: 255 218 185;
@@ -47,10 +47,10 @@
   --oui-color-base-foreground: 255 255 255;
   --oui-color-line: 255 255 255;
 
-  --oui-color-trading-loss: 255 23 68;
+  --oui-color-trading-loss: 255 107 53;
   --oui-color-trading-loss-contrast: 255 255 255;
-  --oui-color-trading-profit: 0 200 83;
-  --oui-color-trading-profit-contrast: 255 255 255;
+  --oui-color-trading-profit: 255 215 0;
+  --oui-color-trading-profit-contrast: 0 0 0;
 
   /* BrownLiquid Gradients */
   --oui-gradient-primary-start: 244 164 96;
@@ -59,11 +59,11 @@
   --oui-gradient-secondary-start: 222 184 135;
   --oui-gradient-secondary-end: 139 69 19;
 
-  --oui-gradient-success-start: 76 255 143;
-  --oui-gradient-success-end: 0 200 83;
+  --oui-gradient-success-start: 255 235 80;
+  --oui-gradient-success-end: 255 215 0;
 
-  --oui-gradient-danger-start: 255 138 171;
-  --oui-gradient-danger-end: 255 23 68;
+  --oui-gradient-danger-start: 255 140 100;
+  --oui-gradient-danger-end: 255 107 53;
 
   --oui-gradient-brand-start: 244 164 96;
   --oui-gradient-brand-end: 160 82 45;
