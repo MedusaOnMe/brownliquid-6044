@@ -14,8 +14,8 @@ span {
 .theme-dark:root {
     --tv-color-pane-background: rgb(101, 67, 33);
     --tv-color-platform-background: rgb(139, 69, 19);
-    --up: #FFD700;     /* Gold candles for up */
-    --down: #FF6B35;   /* Orange-red candles for down */
+    --up: #FFD700;
+    --down: #FF6B35;
     --white-1: rgba(255, 255, 255, 0.98);
 }
 

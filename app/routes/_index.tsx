@@ -30,12 +30,12 @@ export default function Index() {
   const [currentTicker, setCurrentTicker] = useState(0);
 
   const tickerTexts = [
-    "💩 Where every trade smells like victory",
-    "🚽 Institutional-grade shit processing",
-    "⚡ Faster than explosive diarrhea",
-    "💸 Watch jeets dump their bags like laxatives",
-    "🎯 Deep liquid shit pools for maximum slippage",
-    "🔥 Hot steaming piles of profit"
+    "Where every trade smells like victory",
+    "Institutional-grade shit processing",
+    "Faster than explosive diarrhea",
+    "Watch jeets dump their bags like laxatives",
+    "Deep liquid shit pools for maximum slippage",
+    "Hot steaming piles of profit"
   ];
 
   useEffect(() => {
@@ -103,49 +103,107 @@ export default function Index() {
           }
 
           .btn-primary {
-            background: linear-gradient(135deg, #D2691E 0%, #8B4513 100%);
-            border: none;
-            color: white;
-            font-weight: 600;
-            border-radius: 12px;
-            padding: 16px 32px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(210, 105, 30, 0.4);
+            background: linear-gradient(135deg, #FFD700 0%, #D2691E 50%, #8B4513 100%);
+            border: 3px solid #FFD700;
+            color: #000;
+            font-weight: 800;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            padding: 20px 40px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow:
+              0 8px 30px rgba(255, 215, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+            min-width: 280px;
+            text-align: center;
+            white-space: nowrap;
+          }
+
+          .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+          }
+
+          .btn-primary:hover::before {
+            left: 100%;
           }
 
           .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(210, 105, 30, 0.6);
-            color: white;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow:
+              0 15px 45px rgba(255, 215, 0, 0.6),
+              0 0 20px rgba(255, 215, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            color: #000;
             text-decoration: none;
+            border-color: #FFED4E;
           }
 
           .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            font-weight: 600;
-            border-radius: 12px;
-            padding: 16px 32px;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.3) 0%, rgba(101, 67, 33, 0.3) 100%);
+            border: 2px solid #D2691E;
+            color: #FFD700;
+            font-weight: 700;
             font-size: 16px;
-            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 20px;
+            padding: 18px 36px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            backdrop-filter: blur(10px);
+            justify-content: center;
+            gap: 10px;
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+            min-width: 260px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(210, 105, 30, 0.2);
+          }
+
+          .btn-secondary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+          }
+
+          .btn-secondary:hover::after {
+            width: 300px;
+            height: 300px;
           }
 
           .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-1px);
-            color: white;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.5) 0%, rgba(101, 67, 33, 0.5) 100%);
+            border-color: #FFD700;
+            transform: translateY(-3px) scale(1.02);
+            color: #FFD700;
             text-decoration: none;
+            box-shadow:
+              0 8px 25px rgba(210, 105, 30, 0.4),
+              0 0 15px rgba(255, 215, 0, 0.2);
           }
 
           .feature-card {
@@ -182,19 +240,50 @@ export default function Index() {
           }
 
           .stat-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 24px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(210, 105, 30, 0.1) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 24px;
+            padding: 32px 24px;
             text-align: center;
             backdrop-filter: blur(20px);
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+          }
+
+          .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
+          .stat-card:hover::before {
+            opacity: 1;
           }
 
           .stat-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(210, 105, 30, 0.3);
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(210, 105, 30, 0.2) 100%);
+            border-color: rgba(255, 215, 0, 0.6);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+          }
+
+          @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+
+          /* Smooth animations for React components */
+          @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
           }
 
           .floating-orb {
@@ -283,6 +372,17 @@ export default function Index() {
           <div className="floating-orb floating-orb-2"></div>
           <div className="floating-orb floating-orb-3"></div>
 
+          {/* Floating shit icons */}
+          <div className="fixed pointer-events-none z-10 animate-bounce opacity-30" style={{left: '15%', animationDelay: '0s', animationDuration: '8s'}}>
+            <span className="text-2xl">💩</span>
+          </div>
+          <div className="fixed pointer-events-none z-10 animate-bounce opacity-40" style={{left: '75%', animationDelay: '2s', animationDuration: '12s'}}>
+            <span className="text-xl">🧻</span>
+          </div>
+          <div className="fixed pointer-events-none z-10 animate-bounce opacity-35" style={{left: '45%', animationDelay: '4s', animationDuration: '10s'}}>
+            <span className="text-2xl">🚽</span>
+          </div>
+
           <div className="container relative z-10">
             <div className="text-center">
               <div
@@ -301,7 +401,10 @@ export default function Index() {
 
               <h1 className="fade-in fade-in-2 text-6xl md:text-8xl font-black mb-6 leading-tight">
                 <span className="text-gradient">The future of</span><br />
-                <span className="text-gradient-accent">💩 shit coining</span>
+                <span className="text-gradient-accent flex items-center justify-center gap-3">
+                  <span className="text-6xl">💩</span>
+                  shit coining
+                </span>
               </h1>
 
               <div className="fade-in fade-in-3 ticker-text mb-8">
@@ -313,30 +416,66 @@ export default function Index() {
                 When jeets dump their bags, we process that liquid shit faster than your digestive system.
               </p>
 
-              <div className="fade-in fade-in-4 flex flex-col sm:flex-row gap-6 justify-center mb-20">
-                <Link to={`/perp/${DEFAULT_SYMBOL}`} className="btn-primary">
-                  💩 Start shit trading
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
-                <Link to="/markets" className="btn-secondary">
-                  🧻 Browse shit coins
-                </Link>
+              <div className="fade-in fade-in-4 flex flex-col lg:flex-row gap-8 justify-center items-center mb-20">
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+                  <Link to={`/perp/${DEFAULT_SYMBOL}`} className="btn-primary relative">
+                    <span className="flex flex-col items-center">
+                      <span className="text-3xl mb-2">🚀</span>
+                      <span>Launch Trading</span>
+                      <span className="text-sm opacity-80 font-normal">Start Processing Shit</span>
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </Link>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                  <Link to="/markets" className="btn-secondary relative">
+                    <span className="flex flex-col items-center">
+                      <span className="text-3xl mb-2">🧻</span>
+                      <span>Explore Markets</span>
+                      <span className="text-xs opacity-70 font-normal">Browse All Coins</span>
+                    </span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Unique floating elements with interactive effects */}
+              <div className="absolute top-1/4 left-10 w-4 h-4 bg-yellow-400 rounded-full opacity-60 animate-pulse hover:scale-150 transition-transform cursor-pointer"></div>
+              <div className="absolute top-1/3 right-16 w-6 h-6 bg-orange-500 rounded-full opacity-40 animate-bounce hover:bg-yellow-300 transition-colors cursor-pointer" style={{animationDelay: '1s'}}></div>
+              <div className="absolute bottom-1/4 left-1/4 w-3 h-3 bg-amber-600 rounded-full opacity-50 animate-ping hover:animate-spin transition-all cursor-pointer" style={{animationDelay: '2s'}}></div>
+
+              {/* Unique animated background pattern */}
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-16 left-1/3 w-32 h-32 border border-yellow-400 rounded-full opacity-20 animate-spin" style={{animationDuration: '20s'}}></div>
+                <div className="absolute bottom-32 right-1/4 w-24 h-24 border-2 border-orange-500 rounded-full opacity-30 animate-pulse"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-amber-600 rounded-full opacity-10 animate-spin" style={{animationDuration: '30s', animationDirection: 'reverse'}}></div>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="stat-card fade-in fade-in-2">
-                  <div className="text-4xl font-black text-gradient-accent mb-2">💩 $2.5B+</div>
+                  <div className="text-4xl font-black text-gradient-accent mb-2 flex items-center justify-center gap-3">
+                    <span className="text-5xl">💩</span>
+                    $2.5B+
+                  </div>
                   <div className="text-gray-400 font-medium">Shit coins processed daily</div>
                 </div>
                 <div className="stat-card fade-in fade-in-3">
-                  <div className="text-4xl font-black text-gradient-accent mb-2">🧻 420+</div>
+                  <div className="text-4xl font-black text-gradient-accent mb-2 flex items-center justify-center gap-3">
+                    <span className="text-5xl">🧻</span>
+                    420+
+                  </div>
                   <div className="text-gray-400 font-medium">Brown trading pairs</div>
                 </div>
                 <div className="stat-card fade-in fade-in-4">
-                  <div className="text-4xl font-black text-gradient-accent mb-2">🚽 99.9%</div>
+                  <div className="text-4xl font-black text-gradient-accent mb-2 flex items-center justify-center gap-3">
+                    <span className="text-5xl">🚽</span>
+                    99.9%
+                  </div>
                   <div className="text-gray-400 font-medium">Successful shit processing</div>
                 </div>
               </div>
@@ -359,8 +498,8 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="feature-card">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-600 to-amber-700 flex items-center justify-center mb-6 text-2xl">
-                  💩
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-600 to-amber-700 flex items-center justify-center mb-6">
+                  <span className="text-3xl">⚡</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Lightning-fast shit processing</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -370,8 +509,8 @@ export default function Index() {
               </div>
 
               <div className="feature-card">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-700 flex items-center justify-center mb-6 text-2xl">
-                  🧻
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-700 flex items-center justify-center mb-6">
+                  <span className="text-3xl">🧻</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Industrial-grade wiping</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -381,8 +520,8 @@ export default function Index() {
               </div>
 
               <div className="feature-card">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-700 to-amber-600 flex items-center justify-center mb-6 text-2xl">
-                  🚽
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-700 to-amber-600 flex items-center justify-center mb-6">
+                  <span className="text-3xl">🚽</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Deepest shit pools</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -398,15 +537,17 @@ export default function Index() {
         <section className="py-32">
           <div className="container">
             <div className="text-center">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 text-gradient">
-                Ready to start shitting? 💩
+              <h2 className="text-5xl md:text-6xl font-black mb-6 text-gradient flex items-center justify-center gap-4">
+                Ready to start shitting?
+                <span className="text-6xl">💩</span>
               </h2>
               <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
                 Join thousands of degens already flushing their life savings down {brokerName}.
               </p>
 
-              <Link to={`/perp/${DEFAULT_SYMBOL}`} className="btn-primary text-lg px-12 py-5">
-                🚽 Flush my portfolio
+              <Link to={`/perp/${DEFAULT_SYMBOL}`} className="btn-primary text-lg px-12 py-5 flex items-center gap-3">
+                <span className="text-2xl">🚽</span>
+                Flush my portfolio
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
@@ -414,15 +555,15 @@ export default function Index() {
 
               <div className="mt-8 flex justify-center space-x-8 text-sm text-gray-500">
                 <span className="flex items-center">
-                  <span className="text-yellow-400 mr-2">💩</span>
+                  <span className="mr-2">💩</span>
                   No TP required
                 </span>
                 <span className="flex items-center">
-                  <span className="text-yellow-400 mr-2">🧻</span>
+                  <span className="mr-2">🧻</span>
                   Connect any toilet
                 </span>
                 <span className="flex items-center">
-                  <span className="text-yellow-400 mr-2">⏱️</span>
+                  <span className="mr-2">⏱️</span>
                   Shit in 30 seconds
                 </span>
               </div>

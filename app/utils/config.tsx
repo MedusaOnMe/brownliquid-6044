@@ -23,6 +23,10 @@ interface ColorConfigInterface {
   pnlUpColor?: string;
   pnlDownColor?: string;
   chartBG?: string;
+  borderUpColor?: string;
+  borderDownColor?: string;
+  wickUpColor?: string;
+  wickDownColor?: string;
 }
 
 export type OrderlyConfig = {
@@ -168,13 +172,17 @@ const getBottomNavIcon = (menuName: string) => {
 const getColorConfig = (): ColorConfigInterface | undefined => {
   const customColorConfigEnv = getRuntimeConfig('VITE_TRADING_VIEW_COLOR_CONFIG');
 
-  // Return BrownLiquid themed colors that work with brown backgrounds
+  // Return BrownLiquid themed colors with complete candle configuration
   const defaultConfig = {
-    upColor: '#FFD700',      // Gold for up - looks amazing on brown
-    downColor: '#FF6B35',    // Orange-red for down - complements brown
-    pnlUpColor: '#FFD700',   // Gold profit
-    pnlDownColor: '#FF6B35', // Orange-red loss
-    chartBG: 'rgb(101, 67, 33)' // Keep brown chart background
+    upColor: '#FFD700',        // Gold candle body for up
+    downColor: '#FF6B35',      // Orange-red candle body for down
+    borderUpColor: '#FFD700',  // Gold candle border for up
+    borderDownColor: '#FF6B35', // Orange-red candle border for down
+    wickUpColor: '#FFD700',    // Gold wick for up
+    wickDownColor: '#FF6B35',  // Orange-red wick for down
+    pnlUpColor: '#FFD700',     // Gold profit
+    pnlDownColor: '#FF6B35',   // Orange-red loss
+    chartBG: 'rgb(101, 67, 33)' // Brown chart background
   };
 
   if (!customColorConfigEnv || typeof customColorConfigEnv !== 'string' || customColorConfigEnv.trim() === '') {
@@ -310,7 +318,7 @@ export const useOrderlyConfig = () => {
                 Charts powered by <a href="https://tradingview.com" target="_blank" rel="noopener noreferrer">TradingView</a>
               </div>
               <div className="oui-text-2xs oui-text-base-contrast-36" style={{ fontStyle: 'italic' }}>
-                💩 Processing the finest liquid shit in DeFi since 2024 💩
+                Processing the finest liquid shit in DeFi since 2024
               </div>
             </div>
           )
