@@ -435,7 +435,7 @@ export default function Index() {
                   <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                   <Link to="/markets" className="btn-secondary relative">
                     <span className="flex flex-col items-center">
-                      <span className="text-3xl mb-2">🧻</span>
+                      <span className="text-3xl mb-2" style={{filter: 'sepia(1) saturate(2) hue-rotate(25deg) brightness(0.8)'}}>🧻</span>
                       <span>Explore Markets</span>
                       <span className="text-xs opacity-70 font-normal">Browse All Coins</span>
                     </span>
@@ -456,14 +456,7 @@ export default function Index() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="stat-card fade-in fade-in-2">
-                  <div className="text-4xl font-black text-gradient-accent mb-2 flex items-center justify-center gap-3">
-                    <span className="text-5xl">💩</span>
-                    $2.5B+
-                  </div>
-                  <div className="text-gray-400 font-medium">Shit coins processed daily</div>
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <div className="stat-card fade-in fade-in-3">
                   <div className="text-4xl font-black text-gradient-accent mb-2 flex items-center justify-center gap-3">
                     <span className="text-5xl">🧻</span>
