@@ -1,3 +1,56 @@
+/* Aggressively hide "powered by orderly" text */
+.oui-scaffold-footer-powered-by,
+[class*="powered"], [class*="poweredBy"], [class*="footer-powered"],
+*:has-text("powered by"), *:has-text("Powered by"),
+*:has-text("orderly"), *:has-text("Orderly"),
+*[data-testid*="powered"], *[data-testid*="footer"],
+.oui-footer *:contains("powered"),
+.oui-footer *:contains("Powered"),
+.oui-footer *:contains("orderly"),
+.oui-footer *:contains("Orderly"),
+.oui-box:has(span:contains("Powered by")),
+div:has(span:contains("Powered by")),
+.oui-flex:has(span:contains("Powered by")),
+.oui-box.oui-flex.oui-flex-row.oui-items-center.oui-justify-start.oui-flex-nowrap.oui-gap-1,
+span:contains("Powered by"),
+svg[viewBox="0 0 45 14"],
+/* Target the orderly logo SVG and text specifically */
+.oui-box.oui-flex svg[width="45"][height="14"],
+.oui-scaffold-footer-powered-by svg,
+/* Target the exact SVG with specific path content */
+svg[width="45"][height="14"][viewBox="0 0 45 14"] path[d*="M11.272"],
+svg[width="45"][height="14"][viewBox="0 0 45 14"],
+/* Hide entire parent container */
+div:has(svg[width="45"][height="14"]),
+.oui-box:has(svg[width="45"][height="14"]),
+.oui-flex:has(svg[width="45"][height="14"]),
+/* Target the exact footer container with the selector you provided */
+body > div.oui-scaffold-root.oui-font-semibold.oui-bg-base-10.oui-text-base-contrast.oui-flex.oui-flex-col.oui-custom-scrollbar.oui-overflow-auto > div.oui-box.oui-scaffold-footer.oui-w-full.oui-bg-base-10.oui-fixed.oui-bottom-0.oui-z-50.oui-border-t.oui-border-line-12 > div,
+/* Also target the footer more generally */
+.oui-scaffold-footer,
+.oui-box.oui-scaffold-footer {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  z-index: -9999 !important;
+  pointer-events: none !important;
+}
+
+/* More specific targeting */
+.oui-text-2xs.oui-text-base-contrast-54 {
+  display: none !important;
+}
+
+/* Hide any element containing "Powered by" text */
+*:contains("Powered by") {
+  display: none !important;
+}
+
 :root {
   --oui-font-family: 'Raleway', sans-serif;
   --oui-font-size-base: 16px;

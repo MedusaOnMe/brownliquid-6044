@@ -159,21 +159,21 @@ export default function Index() {
             border: 2px solid #D2691E;
             color: #FFD700;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 18px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-radius: 20px;
-            padding: 18px 36px;
+            padding: 20px 40px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             backdrop-filter: blur(15px);
             position: relative;
             overflow: hidden;
-            min-width: 260px;
+            min-width: 280px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(210, 105, 30, 0.2);
           }
@@ -373,13 +373,13 @@ export default function Index() {
           <div className="floating-orb floating-orb-3"></div>
 
           {/* Floating shit icons */}
-          <div className="fixed pointer-events-none z-10 animate-bounce opacity-30" style={{left: '15%', animationDelay: '0s', animationDuration: '8s'}}>
+          <div className="fixed pointer-events-none z-10 animate-bounce opacity-30" style={{left: '5%', top: '20%', animationDelay: '0s', animationDuration: '8s'}}>
             <span className="text-2xl">💩</span>
           </div>
-          <div className="fixed pointer-events-none z-10 animate-bounce opacity-40" style={{left: '75%', animationDelay: '2s', animationDuration: '12s'}}>
+          <div className="fixed pointer-events-none z-10 animate-bounce opacity-40" style={{right: '5%', top: '15%', animationDelay: '2s', animationDuration: '12s'}}>
             <span className="text-xl">🧻</span>
           </div>
-          <div className="fixed pointer-events-none z-10 animate-bounce opacity-35" style={{left: '45%', animationDelay: '4s', animationDuration: '10s'}}>
+          <div className="fixed pointer-events-none z-10 animate-bounce opacity-35" style={{right: '10%', bottom: '20%', animationDelay: '4s', animationDuration: '10s'}}>
             <span className="text-2xl">🚽</span>
           </div>
 
@@ -395,11 +395,11 @@ export default function Index() {
                 <img
                   src={withBasePath("/logo.webp")}
                   alt={brokerName}
-                  className="h-16 mx-auto mb-8 opacity-90"
+                  className="h-32 md:h-40 mx-auto mb-8 opacity-90"
                 />
               </div>
 
-              <h1 className="fade-in fade-in-2 text-6xl md:text-8xl font-black mb-6 leading-tight">
+              <h1 className="fade-in fade-in-2 text-6xl md:text-8xl font-black mb-6 leading-relaxed" style={{lineHeight: '1.3', paddingBottom: '0.25rem'}}>
                 <span className="text-gradient">The future of</span><br />
                 <span className="text-gradient-accent flex items-center justify-center gap-3">
                   <span className="text-6xl">💩</span>
@@ -412,8 +412,8 @@ export default function Index() {
               </div>
 
               <p className="fade-in fade-in-3 text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Trade the brownest coins with the deepest shit liquidity pools in DeFi.
-                When jeets dump their bags, we process that liquid shit faster than your digestive system.
+                When jeets dump their bags, we process that liquid shit.<br /><br />
+                Join other degns and flush your portfolio away with up to 100x leverage.
               </p>
 
               <div className="fade-in fade-in-4 flex flex-col lg:flex-row gap-8 justify-center items-center mb-20">
@@ -421,7 +421,6 @@ export default function Index() {
                   <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
                   <Link to={`/perp/${DEFAULT_SYMBOL}`} className="btn-primary relative">
                     <span className="flex flex-col items-center">
-                      <span className="text-3xl mb-2">🚀</span>
                       <span>Launch Trading</span>
                       <span className="text-sm opacity-80 font-normal">Start Processing Shit</span>
                     </span>
@@ -435,7 +434,6 @@ export default function Index() {
                   <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                   <Link to="/markets" className="btn-secondary relative">
                     <span className="flex flex-col items-center">
-                      <span className="text-3xl mb-2" style={{filter: 'sepia(1) saturate(2) hue-rotate(25deg) brightness(0.8)'}}>🧻</span>
                       <span>Explore Markets</span>
                       <span className="text-xs opacity-70 font-normal">Browse All Coins</span>
                     </span>
@@ -518,7 +516,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Deepest shit pools</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Access the entire Orderly sewage network for maximum liquid shit capacity.
+                  Access the entire sewage network for maximum liquid shit capacity.
                   Deep brown liquidity pools with minimal slippage on all major shit pairs.
                 </p>
               </div>
@@ -530,12 +528,12 @@ export default function Index() {
         <section className="py-32">
           <div className="container">
             <div className="text-center">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 text-gradient flex items-center justify-center gap-4">
+              <h2 className="text-5xl md:text-6xl font-black mb-6 text-gradient flex items-center justify-center gap-4" style={{lineHeight: '1.3', paddingBottom: '0.25rem'}}>
                 Ready to start shitting?
                 <span className="text-6xl">💩</span>
               </h2>
               <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-                Join thousands of degens already flushing their life savings down {brokerName}.
+                Join degens flushing their life savings down {brokerName}.
               </p>
 
               <Link to={`/perp/${DEFAULT_SYMBOL}`} className="btn-primary text-lg px-12 py-5 flex items-center gap-3">

@@ -312,16 +312,8 @@ export const useOrderlyConfig = () => {
           telegramUrl: getRuntimeConfig('VITE_TELEGRAM_URL') || undefined,
           discordUrl: getRuntimeConfig('VITE_DISCORD_URL') || undefined,
           twitterUrl: getRuntimeConfig('VITE_TWITTER_URL') || undefined,
-          trailing: (
-            <div className="oui-text-center">
-              <div className="oui-text-2xs oui-text-base-contrast-54 oui-mb-1">
-                Charts powered by <a href="https://tradingview.com" target="_blank" rel="noopener noreferrer">TradingView</a>
-              </div>
-              <div className="oui-text-2xs oui-text-base-contrast-36" style={{ fontStyle: 'italic' }}>
-                Processing the finest liquid shit in DeFi since 2024
-              </div>
-            </div>
-          )
+          trailing: null,
+          poweredBy: false
         },
       },
       orderlyAppProvider: {
@@ -343,18 +335,64 @@ export const useOrderlyConfig = () => {
           library_path: withBasePath("/tradingview/charting_library/"),
           customCssUrl: withBasePath("/tradingview/chart.css"),
           colorConfig: getColorConfig(),
+          theme: "dark",
+          loading_screen: {
+            backgroundColor: "#654321",
+            foregroundColor: "#FFD700"
+          },
           overrides: {
+            // Main chart background
             "paneProperties.background": "#654321",
             "paneProperties.backgroundType": "solid",
+
+            // Chart area backgrounds
+            "chartProperties.background": "#654321",
+            "chartProperties.backgroundType": "solid",
+
+            // Scale backgrounds
             "scalesProperties.backgroundColor": "#8B4513",
             "scalesProperties.textColor": "#FFFFFF",
+            "scalesProperties.fontSize": 12,
+
+            // Time scale
+            "timeScale.backgroundColor": "#8B4513",
+            "timeScale.textColor": "#FFFFFF",
+
+            // Price scale
+            "priceScale.backgroundColor": "#8B4513",
+            "priceScale.textColor": "#FFFFFF",
+
+            // Legend
+            "legendProperties.showStudyArguments": false,
+            "legendProperties.showStudyTitles": false,
+            "legendProperties.showStudyValues": false,
+            "legendProperties.showSeriesTitle": false,
+
+            // Grid lines
+            "paneProperties.vertGridProperties.color": "#8B4513",
+            "paneProperties.horzGridProperties.color": "#8B4513",
+            "paneProperties.vertGridProperties.style": 0,
+            "paneProperties.horzGridProperties.style": 0,
+
+            // Candle colors
             "mainSeriesProperties.candleStyle.upColor": "#FFD700",
             "mainSeriesProperties.candleStyle.downColor": "#FF6B35",
             "mainSeriesProperties.candleStyle.borderUpColor": "#FFD700",
             "mainSeriesProperties.candleStyle.borderDownColor": "#FF6B35",
             "mainSeriesProperties.candleStyle.wickUpColor": "#FFD700",
-            "mainSeriesProperties.candleStyle.wickDownColor": "#FF6B35"
+            "mainSeriesProperties.candleStyle.wickDownColor": "#FF6B35",
+
+            // Toolbar
+            "toolbar_bg": "#654321",
+            "volumePaneSize": "medium"
           },
+          disabled_features: [
+            "use_localstorage_for_settings",
+            "right_toolbar"
+          ],
+          enabled_features: [
+            "study_templates"
+          ]
         },
         sharePnLConfig: {
           backgroundImages: getPnLBackgroundImages(),

@@ -12,11 +12,40 @@ span {
 }
 
 .theme-dark:root {
-    --tv-color-pane-background: rgb(101, 67, 33);
-    --tv-color-platform-background: rgb(139, 69, 19);
+    --tv-color-pane-background: #654321 !important;
+    --tv-color-platform-background: #654321 !important;
+    --tv-color-toolbar-background: #654321 !important;
+    --tv-color-widget-background: #654321 !important;
+    --tv-color-linetool-background: #654321 !important;
     --up: #FFD700;
     --down: #FF6B35;
     --white-1: rgba(255, 255, 255, 0.98);
+}
+
+/* Force brown backgrounds everywhere */
+[data-name="base"],
+.chart-container,
+.chart-container > div,
+iframe[name*="tradingview"],
+.tv-lightweight-charts,
+.tv-lightweight-charts > *,
+.chart-markup-table,
+.chart-page,
+div[class*="chart"],
+div[class*="pane"],
+div[class*="background"] {
+    background: #654321 !important;
+    background-color: #654321 !important;
+}
+
+/* Force brown scale backgrounds */
+div[class*="price-axis"],
+div[class*="time-axis"],
+div[class*="scales"],
+.price-axis,
+.time-axis {
+    background: #8B4513 !important;
+    background-color: #8B4513 !important;
 }
 
 /* Disabled instant orders placement control */
