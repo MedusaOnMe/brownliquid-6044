@@ -341,7 +341,9 @@ export const useOrderlyConfig = () => {
             foregroundColor: "#FFD700"
           },
           overrides: {
-            // Main chart background
+            // Main chart background - GRADIENT (dark theme default)
+            "paneProperties.backgroundGradientStartColor": "#654321",
+            "paneProperties.backgroundGradientEndColor": "#654321",
             "paneProperties.background": "#654321",
             "paneProperties.backgroundType": "solid",
 
