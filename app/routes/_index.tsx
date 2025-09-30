@@ -478,8 +478,8 @@ export default function Index() {
         <section className="py-32 relative">
           <div className="container">
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 text-gradient">
-                Why shit trade on {brokerName}?
+              <h2 className="text-5xl md:text-6xl font-black mb-6 text-gradient" style={{lineHeight: '1.3', paddingBottom: '0.25rem'}}>
+                Why trade shit on {brokerName}?
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 The only exchange designed specifically for processing the brownest, most liquid shit in crypto.
