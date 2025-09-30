@@ -413,7 +413,7 @@ export default function Index() {
 
               <p className="fade-in fade-in-3 text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                 When jeets dump their bags, we process that liquid shit.<br /><br />
-                Join other degns and flush your portfolio away with up to 100x leverage.
+                Join other degens and flush your portfolio away with up to 100x leverage.
               </p>
 
               <div className="fade-in fade-in-4 flex flex-col lg:flex-row gap-8 justify-center items-center mb-20">
