@@ -407,8 +407,22 @@ export default function Index() {
                 </span>
               </h1>
 
-              <div className="fade-in fade-in-3 ticker-text mb-8">
+              <div className="fade-in fade-in-3 ticker-text mb-6">
                 {tickerTexts[currentTicker]}
+              </div>
+
+              <div className="fade-in fade-in-3 flex justify-center mb-8">
+                <a
+                  href="https://x.com/BrownLiquidDex"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-400 hover:text-[#FFD700] transition-colors duration-300"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+                  </svg>
+                  Follow @BrownLiquidDex
+                </a>
               </div>
 
               <p className="fade-in fade-in-3 text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
